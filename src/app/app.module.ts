@@ -9,10 +9,12 @@ import 'hammerjs';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
