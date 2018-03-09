@@ -44,8 +44,9 @@ export class MenuComponent implements OnInit {
 /** Can also be expressed as dishes = DISHES; 
 TypeScript is smart enough to assign as Array of Dish[] */
 
-  selectedDish: Dish = DISHES[0];	
+  selectedDish: Dish = DISHES[0];
 
+ 
   constructor() { }
 
   ngOnInit() {

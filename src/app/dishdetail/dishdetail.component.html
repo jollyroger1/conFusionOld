@@ -1,0 +1,49 @@
+<!--<p align="left">dishdetail works!</p>-->
+
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"   fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px" 
+    fxLayoutGap.xs="0">
+
+  <div fxFlex="40">
+<!--    <p>Display the details of the Dish here</p> -->
+<!-- *** NOTE *** Instructions said to "replace the card" in menu component's template with dish detail component, so
+		I'm still using a card - just in the dishdetail component as instructed.  
+		Card in menu component has been commented out.  -->
+	<md-card>
+	    <md-card-header>
+		  <md-card-title>
+		     <h3>{{dish.name | uppercase }}</h3>
+		  </md-card-title>
+		</md-card-header>
+		<img md-card-image src="{{dish.image}}" alt="{{dish.name}}"> 
+		<md-card-content>
+		  <p> {{dish.description}}</p>
+		</md-card-content>
+		<md-card-actions>
+		  <button md-button>LIKE</button>
+		  <button md-button>SHARE</button>
+		</md-card-actions> 
+	</md-card>
+  </div>
+
+  <div fxFlex="40">
+<!--    <p>Display the list of comments here</p> -->
+	<md-list>
+	<h2>Comments</h2>
+		<md-list-item *ngFor="let cmts of dish.comments"> 
+				<h3 md-line>{{cmts.comment}}</h3>
+				<p md-line>
+					<span>{{cmts.rating}} Stars </span>
+				</p>
+				<p md-line>
+					<span> --{{cmts.author}}&nbsp;{{cmts.date | date:"MMM. dd, yyyy"}} </span>
+				</p>
+		</md-list-item>
+	</md-list>
+  </div>
+
+</div>
+
